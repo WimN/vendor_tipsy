@@ -154,25 +154,25 @@ PRODUCT_PACKAGES += \
     mkfs.exfat
 endif
 
-ifeq ($(DEFAULT_ROOT_METHOD),magisk)
+# ifeq ($(DEFAULT_ROOT_METHOD),magisk)
 # Magisk Manager --> default root method
-PRODUCT_PACKAGES += \
-    MagiskManager
+# PRODUCT_PACKAGES += \
+#    MagiskManager
 # Copy Magisk zip
-PRODUCT_COPY_FILES += \
-    vendor/tipsy/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
-endif
+# PRODUCT_COPY_FILES += \
+#    vendor/tipsy/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+# endif
 
-ifeq ($(DEFAULT_ROOT_METHOD),supersu)
+# ifeq ($(DEFAULT_ROOT_METHOD),supersu)
 # SuperSU
-PRODUCT_COPY_FILES += \
-  vendor/tipsy/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-   vendor/tipsy/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-endif
+# PRODUCT_COPY_FILES += \
+#  vendor/tipsy/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+#   vendor/tipsy/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+# endif
 
 # Explict rootless defined, or none of the root methods defined,
 # default rootless : nothing todo
-#ifeq ($(DEFAULT_ROOT_METHOD),rootless)
+# ifeq ($(DEFAULT_ROOT_METHOD),rootless)
 #endif
 
 # Stagefright FFMPEG plugin
